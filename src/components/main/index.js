@@ -29,7 +29,7 @@ const Main = () => {
                onClick={() => {
                   window.location.reload();
                }}
-               className="btn btn-success m-2"
+               className="btn btn-primary m-2"
             >
                <i className="fa fa-recycle"></i>
             </button>

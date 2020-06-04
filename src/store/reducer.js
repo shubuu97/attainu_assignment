@@ -48,9 +48,14 @@ const reducer = (state = { ...initialState }, action) => {
       }
 
       case REFRESH_STORE: {
-         return {
-            ...initialState,
-         };
+         const { items } = state || {};
+         let updatedItems = (items || []).map((item) => {
+            return {
+               ...item,
+               value: 0,
+            };
+         });
+         return { ...state, items: [...updatedItems] };
       }
       default:
          return { ...state };
